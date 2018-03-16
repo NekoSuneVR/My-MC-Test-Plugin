@@ -8,35 +8,16 @@ import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.Charset;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
+
+import me.chisdealhs.customplugin.util.Json_Util;
 
 public class Hypixel {
-	
-	private static String readAll(Reader rd) throws IOException {
-	    StringBuilder sb = new StringBuilder();
-	    int cp;
-	    while ((cp = rd.read()) != -1) {
-	      sb.append((char) cp);
-	    }
-	    return sb.toString();
-	  }
-
-	  public static JSONObject readJsonFromUrl(String string) throws IOException, JSONException {
-	    InputStream is = new URL(string).openStream();
-	    try {
-	      BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
-	      String jsonText = readAll(rd);
-	      JSONObject json = new JSONObject(jsonText);
-	      return json;
-	    } finally {
-	      is.close();
-	    }
-	  }
 	  
-	  public static void main(String[] args) throws IOException, JSONException {
-		    JSONObject json = readJsonFromUrl("https://chisdealhd.xyz/radio/np.php");
+	public void main(String[] args) throws IOException {
+		  String[] array = new String[]{"https://chisdealhd.xyz/radio/np.php","Test"};
+		    JSONObject json = Json_Util.Json_Util(array);
 		    System.out.println(json.toString());
 		    System.out.println(json.get("radioname"));
-		  } 
+		  }
 }
