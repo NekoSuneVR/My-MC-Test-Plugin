@@ -42,26 +42,12 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    <distributionManagement>
-        <repositories>
+    <repositories>
 	  <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
-	<repository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>mixer-release</id>
-            <url>https://maven.mixer.com/content/repositories/releases/</url>
-            <layout>default</layout>
-	<snapshotRepository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>mixer-snapshot</id>
-            <url>https://maven.mixer.com/content/repositories/snapshots/</url>
-            <layout>default</layout>
-        </snapshotRepository>
-        </repository>
     </repositories>
-    </distributionManagement>
 
     <build>
         <plugins>

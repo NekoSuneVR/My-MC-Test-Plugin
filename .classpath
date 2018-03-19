@@ -21,5 +21,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Grant/Desktop/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Grant/Desktop/spigot-1.7.10-SNAPSHOT-b1657.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
