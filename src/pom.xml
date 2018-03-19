@@ -14,39 +14,68 @@
             <version>2.2.4</version>
         </dependency>
         <dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-lambda-java-core</artifactId>
-        <version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.mixer</groupId>
-			<artifactId>api</artifactId>
-			<version>5.0.4-SNAPSHOT</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
-		<dependency>
+	    <groupId>com.amazonaws</groupId>
+	    <artifactId>aws-lambda-java-core</artifactId>
+            <version>1.0.0</version>
+	 </dependency>
+	 <dependency>
+		<groupId>com.mixer</groupId>
+		<artifactId>api</artifactId>
+		<version>5.0.4-SNAPSHOT</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+	<dependency>
     		<groupId>com.googlecode.json-simple</groupId>
     		<artifactId>json-simple</artifactId>
     		<version>1.1.1</version>
-		</dependency>
-		
+	</dependency>
+	<dependency>
+            <groupId>com.github.momothereal</groupId>
+            <artifactId>java-canary-webhooks</artifactId>
+            <version>-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.mkremins</groupId>
+            <artifactId>fanciful</artifactId>
+            <version>-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
-
     <distributionManagement>
-        <repository>
+        <repositories>
+	  <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+	<repository>
             <uniqueVersion>false</uniqueVersion>
             <id>mixer-release</id>
             <url>https://maven.mixer.com/content/repositories/releases/</url>
             <layout>default</layout>
-        </repository>
-        <snapshotRepository>
+	<snapshotRepository>
             <uniqueVersion>false</uniqueVersion>
             <id>mixer-snapshot</id>
             <url>https://maven.mixer.com/content/repositories/snapshots/</url>
             <layout>default</layout>
         </snapshotRepository>
+        </repository>
+    </repositories>
     </distributionManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+	
     <reporting>
         <plugins>
             <plugin>
