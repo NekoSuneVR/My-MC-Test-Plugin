@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>me.chisdealhd.customplugin</groupId>
-  <artifactId>jpademo</artifactId>
-  <version>1.0</version>
+  <artifactId>ChisdealHDPlugin</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
    <dependencies>
